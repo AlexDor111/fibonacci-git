@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Run fibonacci git') {
             steps {
-               powershell('powershell -ExecutionPolicy Bypass -File ./scripts/fibonacci.ps1 -N $env:N')
+               powershell('powershell -ExecutionPolicy Bypass -File ./scripts/fibonacci.ps1 -N ${env:N}')
             }
         }
     }
